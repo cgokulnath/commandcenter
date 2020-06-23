@@ -94,7 +94,7 @@ public class EdgeCommandReciever  {
       {
 			ex.printStackTrace();
       }
-	}
+}
 
   //Loading Kafka cluster Properties from configuration file
   public static Properties loadConfig(final String configFile) throws IOException {
