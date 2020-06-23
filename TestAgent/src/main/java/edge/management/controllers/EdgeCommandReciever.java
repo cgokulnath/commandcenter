@@ -47,7 +47,7 @@ public class EdgeCommandReciever  {
 	  // Load kafka cluster properties from a local configuration file
       props = loadConfig("application.properties");
       CommandCenterUpdater.intializeCommandCenter(props);
-	  dispatchCommands();
+      dispatchCommands();
   
   }
   
@@ -74,7 +74,7 @@ public class EdgeCommandReciever  {
 	        {
 		        //Dispatch the Received commands to DeviceManager
 	        	final KStream<String, ValidatedCommand> records = builder.stream(inputCommandstopic, Consumed.with(stringSerde, validatedCmdSerde));
-	            records.foreach((key, value) -> deviceMananger.tell(value, null));
+	                records.foreach((key, value) -> deviceMananger.tell(value, null));
 	        }
 	        
 	        catch(Exception ex)
