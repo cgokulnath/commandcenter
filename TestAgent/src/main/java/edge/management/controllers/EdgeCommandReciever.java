@@ -45,7 +45,7 @@ public class EdgeCommandReciever  {
   public static void main(String[] args) throws IOException {
 	
 	  // Load kafka cluster properties from a local configuration file
-      props = loadConfig("C:\\Users\\SESA547052\\Documents\\workspace-spring-tool-suite-4-4.4.1.RELEASE\\TestAgent\\src\\main\\resources\\application.properties");
+      props = loadConfig("application.properties");
       CommandCenterUpdater.intializeCommandCenter(props);
 	  dispatchCommands();
   
